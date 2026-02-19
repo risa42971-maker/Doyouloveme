@@ -1,0 +1,133 @@
+<html lang="km">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>គេហទំព័រសារភាពស្នេហ៍</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #ffe6e6;
+            text-align: center;
+            padding: 50px;
+            transition: background-color 0.5s;
+        }
+
+        .container {
+            background-color: white;
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            max-width: 500px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            color: #ff4d4d;
+            margin-bottom: 30px;
+        }
+
+        p {
+            color: #666;
+            font-size: 18px;
+            margin-bottom: 30px;
+        }
+
+        .buttons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        button {
+            padding: 12px 30px;
+            border: none;
+            border-radius: 30px;
+            font-size: 18px;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        #yesBtn {
+            background-color: #4CAF50;
+            color: white;
+        }
+
+        #noBtn {
+            background-color: #f44336;
+            color: white;
+            position: relative;
+        }
+
+        button:hover {
+            transform: scale(1.05);
+        }
+
+        .heart {
+            color: #ff4d4d;
+            font-size: 24px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>ព្រមធ្វើសង្សារបងហាក់អត់?<hr>❤️ DO YOU LOVE B HAK ❤️</hr> <span class="heart"></span></h1>
+        <p style="font-family: Arial Black;">ព្រម or អត់</p>
+
+        <div class="buttons">
+            <button id="yesBtn">ព្រម</button>
+            <button id="noBtn">អត់</button>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const yesBtn = document.getElementById('yesBtn');
+            const noBtn = document.getElementById('noBtn');
+            const body = document.body;
+
+            // ពេលចុចប៊ូតុង Yes
+
+            yesBtn.addEventListener('click', function() {
+                window.location.href = 'https://youtu.be/TsCXMRVAnVE?si=he7Nom2ZT9D3VLeX';
+
+            });
+
+
+            // ពេលចុចប៊ូតុង No
+            noBtn.addEventListener('mouseover', function() {
+                // ផ្លាស់ទីប៊ូតុង No ទៅទីតាំងថ្មីដោយចៃដន្យ
+                const maxX = window.innerWidth - noBtn.offsetWidth - 20;
+                const maxY = window.innerHeight - noBtn.offsetHeight - 20;
+
+                const randomX = Math.floor(Math.random() * maxX);
+                const randomY = Math.floor(Math.random() * maxY);
+
+                noBtn.style.position = 'absolute';
+                noBtn.style.left = randomX + 'px';
+                noBtn.style.top = randomY + 'px';
+
+                // ផ្លាស់ប្តូរពណ៌ផ្ទៃខ្នង
+                body.style.backgroundColor = getRandomPastelColor();
+            });
+
+            // ពេលចុចប៊ូតុង No
+            noBtn.addEventListener('click', function() {
+                // ផ្លាស់ទីប៊ូតុង No ទៅទីតាំងថ្មីដោយចៃដន្យ
+                const maxX = window.innerWidth - noBtn.offsetWidth - 20;
+                const maxY = window.innerHeight - noBtn.offsetHeight - 20;
+
+                const randomX = Math.floor(Math.random() * maxX);
+                const randomY = Math.floor(Math.random() * maxY);
+
+                noBtn.style.position = 'absolute';
+                noBtn.style.left = randomX + 'px';
+                noBtn.style.top = randomY + 'px';
+
+                // ផ្លាស់ប្តូរពណ៌ផ្ទៃខ្នង
+                body.style.backgroundColor = getRandomPastelColor();
+            });
+
+        });
+    </script>
+</body>
+</html>
